@@ -1,4 +1,6 @@
 # Whats the car?
+
+print "Tell me a car model: "
 car_model = gets.strip
 
 # Process
@@ -10,4 +12,4 @@ output = case car_model
 	end
 
 # Output
-puts "The car company for #{car_model} is ", output
+print "The car company for #{car_model} is ", output
