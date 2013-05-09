@@ -14,6 +14,10 @@
 # 	puts "The number inside the loop is #{number}"
 # end
 
-(0..15).each do |number|
+# (0..15).each do |number|
+# 	puts "The number inside the loop is #{number}"
+# end
+
+for number in 0..15
 	puts "The number inside the loop is #{number}"
 end
