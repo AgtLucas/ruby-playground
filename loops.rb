@@ -1,6 +1,5 @@
 number = 0
-loop do
-	break if number > 15
+until number > 15 do
 	puts "The number inside the loop is #{number}"
 	number += 1
 end
