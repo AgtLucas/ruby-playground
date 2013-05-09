@@ -1,6 +1,6 @@
 def form &block
 	puts "<form>"
-	yield
+	yield if block_given?
 	puts "</form>"
 end
 
@@ -16,5 +16,5 @@ end
 
 form do |variable|
 	paragraph "This is a paragraph"
-	blockquote "This is a quote from Shakespeare"
+	quote "This is a quote from Shakespeare"
 end
