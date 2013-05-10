@@ -25,7 +25,7 @@ end
 # 	quote "This is a quote from Shakespeare"
 # end
 
-myproc = proc do |only_quotes|
+myproc = lambda do |only_quotes|
 	p only_quotes
 	paragraph "This is a paragraph" unless only_quotes
 	quote "This is a quote from Shakespeare"
