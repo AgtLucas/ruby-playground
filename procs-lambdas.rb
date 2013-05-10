@@ -6,7 +6,7 @@ end
 
 def form_with_proc p
 	puts "<form>"
-	p.call
+	p.call true
 	puts "</form>"
 end
 
@@ -26,6 +26,7 @@ end
 # end
 
 myproc = proc do |only_quotes|
+	p only_quotes
 	paragraph "This is a paragraph" unless only_quotes
 	quote "This is a quote from Shakespeare"
 end
