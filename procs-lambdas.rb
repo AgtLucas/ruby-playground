@@ -18,3 +18,10 @@ form do |variable|
 	paragraph "This is a paragraph"
 	quote "This is a quote from Shakespeare"
 end
+
+myproc = proc do
+	paragraph "This is a paragraph"
+	quote "This is a quote from Shakespeare"
+end
+
+form_with_proc myproc
