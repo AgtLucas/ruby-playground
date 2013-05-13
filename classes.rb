@@ -1,5 +1,6 @@
 class Car
 	attr_reader :state
+	attr_writer :state
 	
 	def initialize engine, tires
 		@engine = engine
