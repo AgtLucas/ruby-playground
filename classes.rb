@@ -22,5 +22,6 @@ car = Car.new "My engine", [ 1,2,3,4 ]
 
 car.start
 p "The current car's state is #{car.state}"
+
 car.stop
 p "The current car's state is #{car.state}"
