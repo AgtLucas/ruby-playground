@@ -16,8 +16,9 @@ end
 class Comment
   attr_reader :user, :body
 
-  def initialize user, body
-
+  def initialize options
+    @user = options[:user]
+    @body = options[:body]
   end
 end
 
@@ -27,7 +28,13 @@ end
 
 post = Post.new author:   "Lucas Churchill",
                 title:    "My first post",
-                body:     "The post...",
-                comments: []
+                body:     "The post..."
+
+post.insert_comment Comment.new({ user: "Logan",
+                                  body: "Good one!"
+                                }),
+                    Comment.new({ user: "Lucas",
+                                  body: "Thanks!"
+                                })
 
 p post.inspect
