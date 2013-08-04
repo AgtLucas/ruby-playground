@@ -11,6 +11,10 @@ class Post
     @body     = options[:body]
     @comments = options[:comments] || []
   end
+
+  def insert_comment *comments
+    comments.each { |c| @comments << c }
+  end
 end
 
 class Comment
