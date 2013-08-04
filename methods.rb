@@ -17,3 +17,7 @@ class Comment
 
   end
 end
+
+# Program
+
+post = Post.new "Lucas Churchill", "My first post", "The post...", []
