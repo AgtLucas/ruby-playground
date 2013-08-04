@@ -5,11 +5,11 @@
 class Post
   attr_reader :author, :title, :body, :comments
 
-  def initialize author, title, body, comments = []
-    @author   = author
-    @title    = title
-    @body     = body
-    @comments = comments
+  def initialize options
+    @author   = options[:author]
+    @title    = options[:title]
+    @body     = options[:body]
+    @comments = options[:comments]
   end
 end
 
@@ -23,6 +23,11 @@ end
 
 # Program
 
-post = Post.new "Lucas Churchill", "My first post", "The post..."
+# post = Post.new "Lucas Churchill", "My first post", "The post..."
+
+post = Post.new author:   "Lucas Churchill",
+                title:    "My first post",
+                body:     "The post...",
+                comments: []
 
 p post.inspect
