@@ -9,7 +9,7 @@ class Post
     @author   = options[:author]
     @title    = options[:title]
     @body     = options[:body]
-    @comments = options[:comments]
+    @comments = options[:comments] || []
   end
 end
 
