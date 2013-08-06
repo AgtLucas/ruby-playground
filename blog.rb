@@ -1,4 +1,7 @@
+require_relative "tweetable"
+
 module Blog
+
 class Post
   attr_reader :author, :title, :body, :comments
 
@@ -19,6 +22,7 @@ class Post
 end
 
 class Comment
+  include Tweetable
   attr_reader :user, :body
 
   def initialize options

@@ -1,9 +1,10 @@
 require_relative "blog"
+require_relative "tweetable"
 
 post = Blog::Post.new author: "Lucas Churchill",
                       title: "A title",
                       body: "The body"
 
-post.insert_random_comment
+post.extend Tweetable
 
-p post
+post.tweet
