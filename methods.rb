@@ -1,5 +1,6 @@
 # Classes
 
+module Blog
 class Post
   attr_reader :author, :title, :body, :comments
 
@@ -22,4 +23,6 @@ class Comment
     @user = options[:user]
     @body = options[:body]
   end
+end
+
 end
