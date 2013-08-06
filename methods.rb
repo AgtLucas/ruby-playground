@@ -23,16 +23,3 @@ class Comment
     @body = options[:body]
   end
 end
-
-post = Post.new author:   "Lucas Churchill",
-                title:    "My first post",
-                body:     "The post..."
-
-post.insert_comment Comment.new({ user: "Logan",
-                                  body: "Good one!"
-                                }),
-                    Comment.new({ user: "Lucas",
-                                  body: "Thanks!"
-                                })
-
-p post.inspect
