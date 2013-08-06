@@ -12,6 +12,10 @@ class Post
   def insert_comment first, second, *thirds, options, &block
     comments.each { |c| @comments << c }
   end
+
+  def insert_random_comment
+    @comments << Comment.new(user: "Lucas", body: "A body")
+  end
 end
 
 class Comment
