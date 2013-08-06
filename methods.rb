@@ -24,10 +24,6 @@ class Comment
   end
 end
 
-# Program
-
-# post = Post.new "Lucas Churchill", "My first post", "The post..."
-
 post = Post.new author:   "Lucas Churchill",
                 title:    "My first post",
                 body:     "The post..."
