@@ -6,3 +6,5 @@ post = Blog::Post.new author: "Lucas",
                       body: nil
 
 post.extend Tweetable
+
+post.tweet
