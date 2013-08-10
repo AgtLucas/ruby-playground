@@ -1,5 +1,5 @@
 module Tweetable
-  class NoBodyError < StandardError
+  class NoBodyError < StandardError; end
   def tweet
     raise noBodyError
     puts "Tweeted the following: #{body}"
