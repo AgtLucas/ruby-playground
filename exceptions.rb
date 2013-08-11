@@ -7,4 +7,7 @@ post = Blog::Post.new author: "Lucas",
 
 post.extend Tweetable
 
-post.tweet
+begin
+  post.tweet
+rescue Tweetable::NoBodyError
+end
