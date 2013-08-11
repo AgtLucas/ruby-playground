@@ -19,6 +19,19 @@ class Post
   def insert_random_comment
     @comments << Comment.new(user: "Lucas", body: "A body")
   end
+
+  def print
+    puts "This post is called: '#@title' and it has the following comments:"
+    begin
+    @comments.each do |c|
+      c.print
+    end
+    rescue UserNotFound => details
+      puts "Error: #{details.message}"
+      raise
+    end
+  end
+
 end
 
 class Comment
@@ -28,6 +41,11 @@ class Comment
   def initialize options
     @user = options[:user]
     @body = options[:body]
+  end
+
+  def print
+    raise UserNotFound if @user.nil?
+    puts "This comment was posted by '#@user': #@body"
   end
 end
 
