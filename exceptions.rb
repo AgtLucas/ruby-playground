@@ -10,4 +10,5 @@ post.extend Tweetable
 begin
   post.tweet
 rescue Tweetable::NoBodyError
+  puts "No body was in the post, tweet could not be sent."
 end
