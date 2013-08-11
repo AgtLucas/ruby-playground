@@ -5,12 +5,7 @@ post = Blog::Post.new author: "Lucas",
                       title: "The title",
                       body: nil
 
-post.extend Tweetable
+post.insert_comment Blog::Comment.new user: "Logan", body: "Nothing..."
+post.insert_comment Blog::Comment.new user: nil,     body: "No user..."
 
-begin
-  post.tweet
-rescue Tweetable::NoBodyError
-  puts "No body was in the post, tweet could not be sent."
-ensure
-  # close file
-end
+post.print

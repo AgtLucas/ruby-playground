@@ -12,7 +12,7 @@ class Post
     @comments = options[:comments] || []
   end
 
-  def insert_comment first, second, *thirds, options, &block
+  def insert_comment comment
     comments.each { |c| @comments << c }
   end
 
