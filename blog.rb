@@ -13,7 +13,7 @@ class Post
   end
 
   def insert_comment comment
-    comments.each { |c| @comments << c }
+    @comments << comment
   end
 
   def insert_random_comment
@@ -44,9 +44,13 @@ class Comment
   end
 
   def print
-    raise UserNotFound if @user.nil?
+    raise UserNotFound, "Comment has no user, please fix this!" if @user.nil?
     puts "This comment was posted by '#@user': #@body"
   end
+end
+
+class UserNotFound < StandardError
+
 end
 
 end
